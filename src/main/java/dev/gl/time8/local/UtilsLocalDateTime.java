@@ -17,7 +17,7 @@ public class UtilsLocalDateTime {
     }
     
     public static LocalDateTime create(int year, Month month, int dayOfMonth, LocalTime lt) {
-        return LocalDateTime.of(year, month, dayOfMonth, lt.getHour(), lt.getMinute(), lt.getSecond());
+        return LocalDateTime.of(year, month, dayOfMonth, lt.getHour(), lt.getMinute(), lt.getSecond(), lt.getNano());
     }
    
     /**

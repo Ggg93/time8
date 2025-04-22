@@ -1,4 +1,4 @@
-package retro;
+package dev.gl.time8.retro;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

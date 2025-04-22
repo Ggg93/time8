@@ -2,6 +2,7 @@ package dev.gl.time8.local;
 
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
+import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,6 +17,16 @@ public class UtilsLocalTimeTests {
     @BeforeAll
     static void init() {
         current = LocalTime.now();
+    }
+    
+    @Test
+    void testDefaultConstructor() {
+        assertNotNull(new UtilsLocalTime());
+    }
+    
+    @Test
+    void twoCurrentsAreDifferent() {
+        assertEquals(UtilsLocalTime.current().withNano(0), (UtilsLocalTime.current().withNano(0)));
     }
     
     @Test
